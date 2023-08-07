@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		4D797BDA2A7678C200F2B571 /* Insulin_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BD92A7678C200F2B571 /* Insulin_CalculatorApp.swift */; };
-		4D797BDC2A7678C200F2B571 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BDB2A7678C200F2B571 /* ContentView.swift */; };
+		4D797BDC2A7678C200F2B571 /* CalculationHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BDB2A7678C200F2B571 /* CalculationHash.swift */; };
 		4D797BDE2A7678C300F2B571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D797BDD2A7678C300F2B571 /* Assets.xcassets */; };
 		4D797BE12A7678C300F2B571 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D797BE02A7678C300F2B571 /* Preview Assets.xcassets */; };
+		4D797BEA2A7E188E00F2B571 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BE92A7E188E00F2B571 /* MainTabBar.swift */; };
+		4D797BEC2A7E394E00F2B571 /* CalculationProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BEB2A7E394E00F2B571 /* CalculationProducts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D797BD62A7678C200F2B571 /* Insulin Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insulin Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D797BD92A7678C200F2B571 /* Insulin_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insulin_CalculatorApp.swift; sourceTree = "<group>"; };
-		4D797BDB2A7678C200F2B571 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4D797BDB2A7678C200F2B571 /* CalculationHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHash.swift; sourceTree = "<group>"; };
 		4D797BDD2A7678C300F2B571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D797BE02A7678C300F2B571 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D797BE92A7E188E00F2B571 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		4D797BEB2A7E394E00F2B571 /* CalculationProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationProducts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				4D797BD92A7678C200F2B571 /* Insulin_CalculatorApp.swift */,
-				4D797BDB2A7678C200F2B571 /* ContentView.swift */,
+				4D797BE82A767A6B00F2B571 /* View */,
 				4D797BDD2A7678C300F2B571 /* Assets.xcassets */,
 				4D797BDF2A7678C300F2B571 /* Preview Content */,
 			);
@@ -65,6 +69,24 @@
 				4D797BE02A7678C300F2B571 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D797BE72A76791200F2B571 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4D797BE82A767A6B00F2B571 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D797BDB2A7678C200F2B571 /* CalculationHash.swift */,
+				4D797BEB2A7E394E00F2B571 /* CalculationProducts.swift */,
+				4D797BE92A7E188E00F2B571 /* MainTabBar.swift */,
+				4D797BE72A76791200F2B571 /* ViewModel */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D797BDC2A7678C200F2B571 /* ContentView.swift in Sources */,
+				4D797BEA2A7E188E00F2B571 /* MainTabBar.swift in Sources */,
+				4D797BDC2A7678C200F2B571 /* CalculationHash.swift in Sources */,
 				4D797BDA2A7678C200F2B571 /* Insulin_CalculatorApp.swift in Sources */,
+				4D797BEC2A7E394E00F2B571 /* CalculationProducts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

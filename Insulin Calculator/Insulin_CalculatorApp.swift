@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+
+let screen = UIScreen.main.bounds
+
 @main
 struct Insulin_CalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabBar()
         }
     }
 }
