@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2AED092A847C4B00E78B27 /* InsulinCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2AED082A847C4B00E78B27 /* InsulinCalc.swift */; };
 		4D797BDA2A7678C200F2B571 /* Insulin_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BD92A7678C200F2B571 /* Insulin_CalculatorApp.swift */; };
 		4D797BDC2A7678C200F2B571 /* CalculationHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BDB2A7678C200F2B571 /* CalculationHash.swift */; };
 		4D797BDE2A7678C300F2B571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D797BDD2A7678C300F2B571 /* Assets.xcassets */; };
 		4D797BE12A7678C300F2B571 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D797BE02A7678C300F2B571 /* Preview Assets.xcassets */; };
 		4D797BEA2A7E188E00F2B571 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BE92A7E188E00F2B571 /* MainTabBar.swift */; };
 		4D797BEC2A7E394E00F2B571 /* CalculationProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D797BEB2A7E394E00F2B571 /* CalculationProducts.swift */; };
+		4DFE32B62A81DDE400886AAE /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE32B52A81DDE300886AAE /* ProductModel.swift */; };
+		4DFE32B82A81DF4300886AAE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE32B72A81DF4300886AAE /* Product.swift */; };
+		4DFE32BA2A81E1E300886AAE /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE32B92A81E1E300886AAE /* ProductListView.swift */; };
+		4DFE32BC2A81E33700886AAE /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE32BB2A81E33700886AAE /* ProductViewModel.swift */; };
+		4DFE32BF2A81FCED00886AAE /* ProductsCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE32BE2A81FCED00886AAE /* ProductsCatalog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2AED082A847C4B00E78B27 /* InsulinCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsulinCalc.swift; sourceTree = "<group>"; };
 		4D797BD62A7678C200F2B571 /* Insulin Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insulin Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D797BD92A7678C200F2B571 /* Insulin_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insulin_CalculatorApp.swift; sourceTree = "<group>"; };
 		4D797BDB2A7678C200F2B571 /* CalculationHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHash.swift; sourceTree = "<group>"; };
@@ -23,6 +30,11 @@
 		4D797BE02A7678C300F2B571 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D797BE92A7E188E00F2B571 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		4D797BEB2A7E394E00F2B571 /* CalculationProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationProducts.swift; sourceTree = "<group>"; };
+		4DFE32B52A81DDE300886AAE /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		4DFE32B72A81DF4300886AAE /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4DFE32B92A81E1E300886AAE /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		4DFE32BB2A81E33700886AAE /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		4DFE32BE2A81FCED00886AAE /* ProductsCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCatalog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				4D797BD92A7678C200F2B571 /* Insulin_CalculatorApp.swift */,
+				4D2AED082A847C4B00E78B27 /* InsulinCalc.swift */,
+				4D797BE72A76791200F2B571 /* ViewModel */,
 				4D797BE82A767A6B00F2B571 /* View */,
 				4D797BDD2A7678C300F2B571 /* Assets.xcassets */,
 				4D797BDF2A7678C300F2B571 /* Preview Content */,
@@ -74,6 +88,9 @@
 		4D797BE72A76791200F2B571 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4DFE32B52A81DDE300886AAE /* ProductModel.swift */,
+				4DFE32B72A81DF4300886AAE /* Product.swift */,
+				4DFE32BE2A81FCED00886AAE /* ProductsCatalog.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -81,12 +98,21 @@
 		4D797BE82A767A6B00F2B571 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DFE32BD2A81E33F00886AAE /* Components */,
 				4D797BDB2A7678C200F2B571 /* CalculationHash.swift */,
+				4DFE32B92A81E1E300886AAE /* ProductListView.swift */,
 				4D797BEB2A7E394E00F2B571 /* CalculationProducts.swift */,
 				4D797BE92A7E188E00F2B571 /* MainTabBar.swift */,
-				4D797BE72A76791200F2B571 /* ViewModel */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4DFE32BD2A81E33F00886AAE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE32BB2A81E33700886AAE /* ProductViewModel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +186,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D797BEA2A7E188E00F2B571 /* MainTabBar.swift in Sources */,
+				4D2AED092A847C4B00E78B27 /* InsulinCalc.swift in Sources */,
 				4D797BDC2A7678C200F2B571 /* CalculationHash.swift in Sources */,
+				4DFE32BA2A81E1E300886AAE /* ProductListView.swift in Sources */,
 				4D797BDA2A7678C200F2B571 /* Insulin_CalculatorApp.swift in Sources */,
 				4D797BEC2A7E394E00F2B571 /* CalculationProducts.swift in Sources */,
+				4DFE32B62A81DDE400886AAE /* ProductModel.swift in Sources */,
+				4DFE32BC2A81E33700886AAE /* ProductViewModel.swift in Sources */,
+				4DFE32BF2A81FCED00886AAE /* ProductsCatalog.swift in Sources */,
+				4DFE32B82A81DF4300886AAE /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
