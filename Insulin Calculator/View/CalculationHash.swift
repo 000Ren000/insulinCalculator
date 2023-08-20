@@ -13,6 +13,7 @@ struct CalculationHash: View {
     @State var showProductList: Bool = false
     @State var ins = ""
     @State var showingAlert = false
+    @State var showPopup = false
     
     @FocusState var closeNumericPanel: Bool
     
@@ -40,7 +41,7 @@ struct CalculationHash: View {
                 Image(insCalc.productImage)
                     .resizable()
                     .frame(width: 65, height: 65)
-                    //.clipShape(Circle())
+                //.clipShape(Circle())
                     .cornerRadius(15)
                     .padding(.horizontal, 15)
                 Text(insCalc.productName)
@@ -53,12 +54,12 @@ struct CalculationHash: View {
                 TextField("Вес сухого продукта", text: $insCalc.dryWeight)
                     .focused($closeNumericPanel)
                     .keyboardType(.decimalPad)
-                               .onReceive(Just(insCalc.finishedProductWeight)) { newValue in
-                                   let filtered = newValue.filter { "0123456789".contains($0) }
-                                   if filtered != newValue {
-                                       insCalc.finishedProductWeight = filtered
-                                   }
-                               }
+                    .onReceive(Just(insCalc.finishedProductWeight)) { newValue in
+                        let filtered = newValue.filter { "0123456789".contains($0) }
+                        if filtered != newValue {
+                            insCalc.finishedProductWeight = filtered
+                        }
+                    }
                     .frame(maxWidth: screen.width * 0.65, minHeight: 40)
                     .foregroundColor(.green)
                     .bold()
@@ -111,12 +112,12 @@ struct CalculationHash: View {
                 TextField("Вес готового продукта", text: $insCalc.finishedProductWeight)
                     .focused($closeNumericPanel)
                     .keyboardType(.decimalPad)
-                               .onReceive(Just(insCalc.finishedProductWeight)) { newValue in
-                                   let filtered = newValue.filter { "0123456789".contains($0) }
-                                   if filtered != newValue {
-                                       insCalc.finishedProductWeight = filtered
-                                   }
-                               }
+                    .onReceive(Just(insCalc.finishedProductWeight)) { newValue in
+                        let filtered = newValue.filter { "0123456789".contains($0) }
+                        if filtered != newValue {
+                            insCalc.finishedProductWeight = filtered
+                        }
+                    }
                     .frame(maxWidth: screen.width * 0.65, minHeight: 40)
                     .foregroundColor(.green)
                     .bold()
@@ -129,12 +130,12 @@ struct CalculationHash: View {
                     TextField("Кол углеводов", text: $insCalc.carbohydrates)
                         .focused($closeNumericPanel)
                         .keyboardType(.decimalPad)
-                                   .onReceive(Just(insCalc.carbohydrates)) { newValue in
-                                       let filtered = newValue.filter { ".0123456789".contains($0) }
-                                       if filtered != newValue {
-                                           insCalc.carbohydrates = filtered
-                                       }
-                                   }
+                        .onReceive(Just(insCalc.carbohydrates)) { newValue in
+                            let filtered = newValue.filter { ".0123456789".contains($0) }
+                            if filtered != newValue {
+                                insCalc.carbohydrates = filtered
+                            }
+                        }
                         .frame(maxWidth: screen.width * 0.65, minHeight: 40)
                         .foregroundColor(.green)
                         .bold()
@@ -148,7 +149,7 @@ struct CalculationHash: View {
                     }.sheet(isPresented: $showProductList) {
                         ProductListView( insCalc: insCalc)
                     }
-
+                    
                 }
                 
                 VStack {
@@ -168,9 +169,9 @@ struct CalculationHash: View {
                         .padding(.horizontal, 10)
                         .background(Color("buttonColor"))
                         .cornerRadius(15)
-                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                        //                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
+                        //                            Button("OK", role: .cancel) { }
+                        //                        }
                         
                         
                         
@@ -188,9 +189,9 @@ struct CalculationHash: View {
                         .padding(.horizontal, 10)
                         .background(Color("buttonColor"))
                         .cornerRadius(15)
-                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                        //                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
+                        //                            Button("Oк", role: .cancel) { }
+                        //                        }
                     }
                     
                     HStack{
@@ -208,9 +209,9 @@ struct CalculationHash: View {
                         .padding(.horizontal, 10)
                         .background(Color("buttonColor"))
                         .cornerRadius(15)
-                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                        //                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
+                        //                            Button("OK", role: .cancel) { }
+                        //                        }
                         Button {
                             if inputCheck() {
                                 ins = String(insCalc.getCostIns(edIns: 4))
@@ -225,14 +226,12 @@ struct CalculationHash: View {
                         .padding(.horizontal, 10)
                         .background(Color("buttonColor"))
                         .cornerRadius(15)
-                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                        //                        .alert("Нужно \(ins) гр", isPresented: $showingAlert) {
+                        //                            Button("OK", role: .cancel) { }
+                        //                        }
                     }.padding(.bottom, 40)
                 }
                 
-                
-
             }
             .frame(maxWidth: screen.width * 0.70, maxHeight: 300)
             .padding(30)
@@ -245,29 +244,36 @@ struct CalculationHash: View {
             Text(ins)
                 .font(.system(size: 60))
                 .bold()
-
+            
+            
+            
             Spacer()
+            
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding()
-            .background(Color("bg"))
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(leading: HStack {
-                Image(systemName: "line.horizontal.3")
-                Spacer(minLength: 25)
-                Text("Расчяет каши")
-                    .font(.title2.bold())
-                })
-            .foregroundColor(Color("textColor"))
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                   Spacer()
-                    Button ("Готово"){
-                        closeNumericPanel = false
-                    }.foregroundColor(.blue)
-                }
+        .padding()
+        .background(Color("bg"))
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarItems(leading: HStack {
+            Image(systemName: "line.horizontal.3")
+            Spacer(minLength: 25)
+            Text("Расчяет каши")
+                .font(.title2.bold())
+        })
+        .foregroundColor(Color("textColor"))
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button ("Готово"){
+                    closeNumericPanel = false
+                }.foregroundColor(.blue)
             }
         }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Результат"), message: Text("\(ins) гр"), dismissButton: .default(Text("Готово")))
+        }
+    }
 }
 
 
