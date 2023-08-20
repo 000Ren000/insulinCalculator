@@ -11,7 +11,7 @@ import Combine
 struct CalculationHash: View {
 
     @State var showProductList: Bool = false
-    @State var ins = ""
+    @State var ins = "0"
     @State var showingAlert = false
     @State var showPopup = false
     
@@ -32,9 +32,16 @@ struct CalculationHash: View {
     
     var body: some View {
         VStack {
+            HStack (spacing: 25){
+               Image(systemName: "line.horizontal.3")
+               Text("Расчяет каши")
+                   .font(.title2.bold())
+                Spacer()
+           }
             Rectangle().frame(height: 1)
                 .padding(.bottom, 15)
                 .padding(.horizontal, 10)
+            
             
             
             HStack {
@@ -255,12 +262,6 @@ struct CalculationHash: View {
         .padding()
         .background(Color("bg"))
         .navigationBarTitle("", displayMode: .inline)
-        .navigationBarItems(leading: HStack {
-            Image(systemName: "line.horizontal.3")
-            Spacer(minLength: 25)
-            Text("Расчяет каши")
-                .font(.title2.bold())
-        })
         .foregroundColor(Color("textColor"))
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {

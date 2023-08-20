@@ -30,8 +30,14 @@ struct CalculationProducts: View {
     
     var body: some View {
         VStack() {
+            HStack (spacing: 25) {
+               Image(systemName: "line.horizontal.3")
+               Text("Расчяет готового продукта")
+                   .font(.title2.bold())
+                Spacer()
+           }
             Rectangle().frame(height: 1)
-                .padding(.bottom, 15)
+                .padding(.bottom, 25)
                 .padding(.horizontal, 10)
             
             VStack(spacing: 20) {
@@ -115,12 +121,6 @@ struct CalculationProducts: View {
         .padding()
         .background(Color("bg"))
         .navigationBarTitle("", displayMode: .inline)
-        .navigationBarItems(leading: HStack {
-            Image(systemName: "line.horizontal.3")
-            Spacer(minLength: 25)
-            Text("Расчяет готового продукта")
-                .font(.title2.bold())
-        })
         .foregroundColor(Color("textColor"))
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
